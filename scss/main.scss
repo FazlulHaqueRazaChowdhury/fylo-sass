@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
 $mobile-width: 375px;
 $desktop-width: 1440px;
 
@@ -13,24 +13,48 @@ $accent-error: hsl(0, 100%, 63%);
 
 $neutral: hsl(0, 0%, 100%);
 
-$font-family-header: 'Raleway';
+$font-family-header: 'Raleway', sans-serif;
+$font-family-body: 'Open Sans', sans-serif;;
+
+$font-size-header: 32px;
 $font-size-body: 14px;
+$font-bold : 700;
+*{
+    margin: 0%;
+    padding: 0%;
+}
 
-
-body{
+.container{
+    
+    margin: 0% auto;
+    max-width: 1440px;
+}
+.main{
+    font-family: $font-family-body;
     font-size: $font-size-body;
     color: $neutral;
 }
 .font-header{
-    font-size: 16px !important;
     font-family: $font-family-header !important;
+    font-size: $font-size-header !important;
 }
-
+.text-center {
+    text-align: center;
+}
+.font-bold {
+    font-weight: $font-bold;
+}
 .introEmailBackground{
     background-color: $primary-color-intro-email-bg;
+    background-image: url('/images/bg-curvy-mobile.svg');
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+    background-position: bottom;
 }
 .mainBackground{
     background-color: $primary-color-main-bg;
+    min-height: 100vh;
 }
 .footerBackground{
     background-color: $primary-color-footer-bg;
@@ -38,9 +62,18 @@ body{
 .testomonialBackground{
     background-color: $primary-color-testomonial-bg;
 }
-
+.intro {
+    
+    right: 10%;
+}
 .button{
-    background-image: linear-gradient($accent-call-to-action,$accent-call-to-action-g);
+    padding: 10px 60px;
+    border: 0;
+    outline: 0;
+    border-radius: 40px;
+    color: $neutral;
+    font-size: $font-size-body;
+    background-image: linear-gradient(90deg,$accent-call-to-action,$accent-call-to-action-g);
 }
 .error{
     color: $accent-error;
@@ -53,4 +86,93 @@ body{
 .my-100px{
     margin-top: 100px;
     margin-bottom: 100px;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between !important;
+}
+.items-center {
+    align-items: center;
+}
+.gap-x-auto {
+    margin: 0px 40px;
+}
+.gap-y-2 {
+    margin: 2px 0px;
+}
+.gap-y-10 {
+    margin: 50px 0px;
+}
+.nav-items {
+    list-style-type: none;
+}
+.relative{
+    position: relative;
+
+}
+.absolute {
+    position: absolute;
+
+}
+.bottom-0{
+    bottom: 0%;
+}
+.z-index-50{
+    z-index: 5 !important  ;
+}
+.z-index-10 {
+    z-index: 2 !important;
+}
+
+
+.grid {
+    display: grid;
+    grid-row-gap: 50px;
+}
+.grid-cols-2 {
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-cols-3 {
+    grid-template-columns: repeat(3,1fr);
+}
+
+//card
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    #{&}-image {
+        margin: 10px auto;
+        
+        margin: 0 auto;
+    }
+    #{&}-body {
+        margin: 10px auto;
+        color: black;
+        
+    }
+    #{&}-header{
+        margin: 10px auto;
+        font-size: $font-size-body + 4;
+        color: $neutral;
+        font-weight: $font-bold;
+    }
+    #{&}-text{
+        margin: 10px auto;
+        font-size: $font-size-body;
+        color : $neutral;
+    }
 }
