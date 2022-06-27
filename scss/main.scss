@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+$mobile-width: 375px;
+$desktop-width: 1440px;
+
+$primary-color-intro-email-bg: hsl(217, 28%, 15%);
+$primary-color-main-bg: hsl(218, 28%, 13%);
+$primary-color-footer-bg: hsl(216, 53%, 9%);
+$primary-color-testomonial-bg: hsl(219, 30%, 18%);
+
+$accent-call-to-action: hsl(176, 68%, 64%);
+$accent-call-to-action-g:  hsl(198, 60%, 50%);
+$accent-error: hsl(0, 100%, 63%);
+
+$neutral: hsl(0, 0%, 100%);
+
+$font-family-header: 'Raleway';
+$font-size-body: 14px;
+
+
+body{
+    font-size: $font-size-body;
+    color: $neutral;
+}
+.font-header{
+    font-size: 16px !important;
+    font-family: $font-family-header !important;
+}
+
+.introEmailBackground{
+    background-color: $primary-color-intro-email-bg;
+}
+.mainBackground{
+    background-color: $primary-color-main-bg;
+}
+.footerBackground{
+    background-color: $primary-color-footer-bg;
+}
+.testomonialBackground{
+    background-color: $primary-color-testomonial-bg;
+}
+
+.button{
+    background-image: linear-gradient($accent-call-to-action,$accent-call-to-action-g);
+}
+.error{
+    color: $accent-error;
+}
+
+.mx-auto{
+    margin: 0% auto !important;
+}
+
+.my-100px{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
